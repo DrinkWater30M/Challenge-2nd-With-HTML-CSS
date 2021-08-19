@@ -1,0 +1,128 @@
+html{
+    font-family: 'Inter', sans-serif, 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsl(233, 47%, 7%);
+}
+
+.container{
+    width: 1110px;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+.container .card{
+    background-color: hsl(244, 38%, 16%);
+    padding: 80px 120px 80px 75px;
+    flex: 1;
+}
+
+.container .card h1{
+    color: #fefdff;
+    font-family:'Inter' ;
+    font-weight: 700;
+}
+
+.container .card h1 span{
+    color: #ae5fdf;
+}
+
+.container .card p{
+    margin-top: 30px;
+    line-height: 25px;
+    color: #9390ad;
+    font-weight: 400;
+}
+
+.container .card .statistic{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .card .statistic h2{
+    color: #fefdff;
+    font-weight: 700;
+}
+
+.container .card .statistic p{
+    color: #9390ad;
+    font-weight: 400;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.container .card .statistic div{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.container .image{
+    flex: 1;
+}
+
+.container .image .overlay{
+    position: relative;
+    top: -100%;
+    left: 0;
+    z-index: 10;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    background-color: #ae5fdf;
+}
+
+.attribution{
+    margin: 30px;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 1120px){
+    body{
+        top:10%;
+        transform: translateX(-50%);
+    }
+    .container{
+        width: 325px;
+        height: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .container .card{
+        padding: 45px 35px;
+        text-align: center;
+    }
+
+    .container .card .statistic{
+        margin-top: 55px;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .container .card .statistic div{
+        align-items: center;
+    }
+
+    .container .image img{
+        width: 100%;
+    }
+}
